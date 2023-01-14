@@ -37,13 +37,13 @@
     border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.gerak-ih-backgroundnya{
+/* .gerak-ih-backgroundnya{
     background: linear-gradient(90deg, #BBD7E0, #70C5E0);
     background-size: 400% 400%;
     animation: anim 2.5s infinite ease-in-out;
-}
+} */
 
-@keyframes anim {
+/* @keyframes anim {
     0% {
         background-position: 0 50%;
     }
@@ -53,4 +53,4 @@
     100% {
         background-position: 0 50%;
     }
-}
+} */
