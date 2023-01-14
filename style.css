@@ -20,7 +20,7 @@
     background-clip: content-box;
   }
 
-  /* warna akan berubah menjadi abu mudah saat kursor diarahkan  */
+  /* warna akan berubah menjad abu mudah saat kursor diarahkan  */
   ::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
   }
