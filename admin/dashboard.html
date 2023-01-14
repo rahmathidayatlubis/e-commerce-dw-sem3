@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OurShop | Dashboard</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../assets/dist/css/adminlte.min.css">
+    <!-- bs 5.2 -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- css glass -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<!--
+`body` tag options:
+
+  Apply one or more of the following classes to to the body tag
+  to get the desired effect
+
+  * sidebar-collapse
+  * sidebar-mini
+-->
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header fixed-top navbar navbar-expand bodi ps-3 border-bottom">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar fixed-top sidebar-light-info elevation-4 sidebar-no-expand">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link text-decoration-none">
+                <img src="../dist/img/os.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-bold">OurShop</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../dist/img/Rahmat.webp" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block text-decoration-none">Rahmat Hidayat Lubis</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#list-barang" class="nav-link active" id="list-barang-list" data-bs-toggle="list"
+                                role="tab" aria-controls="list-barang">
+                                <i class="nav-icon fas fa-box-open"></i>
+                                <p>
+                                    Etalase
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#list-profile" class="nav-link" id="list-profile-list" data-bs-toggle="list"
+                                href="#list-profile" role="tab" aria-controls="list-profile">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    Penjualan
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper p-4 mt-5">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-barang" role="tabpanel"
+                    aria-labelledby="list-barang-list">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row text-center">
+                                <h3>Etalase Toko</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>N0</th>
+                                        <th>Produk</th>
+                                        <th>Harga Jual</th>
+                                        <th>Stok</th>
+                                        <th>Etalase</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Logitech G705</td>
+                                        <td>959000</td>
+                                        <td>90</td>
+                                        <td>Mouse Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit" data-bs-toggle="modal" data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Logitech G203</td>
+                                        <td>259000</td>
+                                        <td>15</td>
+                                        <td>Mouse Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Logitech G PRO</td>
+                                        <td>1989000</td>
+                                        <td>34</td>
+                                        <td>Mouse Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Logitech G903 HERO</td>
+                                        <td>1399000</td>
+                                        <td>44</td>
+                                        <td>Mouse Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Logitech G715</td>
+                                        <td>2549000</td>
+                                        <td>45</td>
+                                        <td>Keyboard Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Logitech G413SE</td>
+                                        <td>1049000</td>
+                                        <td>89</td>
+                                        <td>Keyboard Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Logitech G512</td>
+                                        <td>1349000</td>
+                                        <td>56</td>
+                                        <td>Keyboard Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Logitech G Pro Clicky</td>
+                                        <td>1569000</td>
+                                        <td>16</td>
+                                        <td>Keyboard Gaming</td>
+                                        <td class="text-center">
+                                            <div class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn btn-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer py-3 px-3">
+                            <div class="row px-3">
+                                <div class="btn btn-success px-3 py-2 fw-semibold" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">
+                                    Tambah Barang
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- target modal tambah barang -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex justify-content-center">
+                                    <h1 class="modal-title fs-3 text-center" id="staticBackdropLabel">Tambah Barang
+                                    </h1>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Nama
+                                                Barang</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Nama Barang...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Etalase</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Etalase...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">Foto Produk</label>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Modal
+                                                Awal</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Rp...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Harga
+                                                Jual</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Rp...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Stok
+                                                Barang</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Stok...">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary px-3 py-2 fw-semibold me-2"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button id="tambahBr" type="button" class="btn btn-primary px-3 py-2 fw-semibold"
+                                        data-bs-dismiss="modal">Tambah</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+
+                    <!-- edit br -->
+                    <!-- target modal edit barang -->
+                    <div class="modal fade" id="edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex justify-content-center">
+                                    <h1 class="modal-title fs-3 text-center" id="staticBackdropLabel">Edit Barang
+                                    </h1>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Nama
+                                                Barang</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Nama Barang...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Etalase</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Etalase...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">Foto Produk</label>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Modal
+                                                Awal</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Rp...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Harga
+                                                Jual</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Rp...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Stok
+                                                Barang</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Stok...">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary px-3 py-2 fw-semibold me-2"
+                                        data-bs-dismiss="modal">Batal</button>
+                                    <button id="editBr" type="button" class="btn btn-success px-3 py-2 fw-semibold"
+                                        data-bs-dismiss="modal">Simpan
+                                        Perubahan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade ps-0" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <!-- Main content -->
+                    <div class="content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <h3 class="card-title">Online Store Visitors</h3>
+                                                <a href="javascript:void(0);" class="text-decoration-none">View
+                                                    Report</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <p class="d-flex flex-column">
+                                                    <span class="text-bold text-lg">820</span>
+                                                    <span>Visitors Over Time</span>
+                                                </p>
+                                                <p class="ml-auto d-flex flex-column text-right">
+                                                    <span class="text-success">
+                                                        <i class="fas fa-arrow-up"></i> 12.5%
+                                                    </span>
+                                                    <span class="text-muted">Since last week</span>
+                                                </p>
+                                            </div>
+                                            <!-- /.d-flex -->
+
+                                            <div class="position-relative mb-4">
+                                                <img src="../dist/img/line.png" alt="" height="200px">
+                                            </div>
+
+                                            <div class="d-flex flex-row justify-content-end">
+                                                <span class="mr-2">
+                                                    <i class="fas fa-square text-primary"></i> This Week
+                                                </span>
+
+                                                <span>
+                                                    <i class="fas fa-square text-gray"></i> Last Week
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="card">
+                                        <div class="card-header border-0">
+                                            <h3 class="card-title">Products</h3>
+                                            <div class="card-tools">
+                                                <a href="#" class="btn btn-tool btn-sm">
+                                                    <i class="fas fa-download"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-tool btn-sm">
+                                                    <i class="fas fa-bars"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body table-responsive p-0">
+                                            <table class="table table-striped table-valign-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Product</th>
+                                                        <th>Price</th>
+                                                        <th>Sales</th>
+                                                        <th>More</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="../dist/img/G Pro Clicky.jpg" alt="Product 1"
+                                                                class="img-circle img-size-32 mr-2">
+                                                            Some Product
+                                                        </td>
+                                                        <td>$13 USD</td>
+                                                        <td>
+                                                            <small class="text-success mr-1">
+                                                                <i class="fas fa-arrow-up"></i>
+                                                                12%
+                                                            </small>
+                                                            12,000 Sold
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="text-muted">
+                                                                <i class="fas fa-search"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="../dist/img/G512.jpg" alt="Product 1"
+                                                                class="img-circle img-size-32 mr-2">
+                                                            Another Product
+                                                        </td>
+                                                        <td>$29 USD</td>
+                                                        <td>
+                                                            <small class="text-warning mr-1">
+                                                                <i class="fas fa-arrow-down"></i>
+                                                                0.5%
+                                                            </small>
+                                                            123,234 Sold
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="text-muted">
+                                                                <i class="fas fa-search"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="../dist/img/g715.jpg" alt="Product 1"
+                                                                class="img-circle img-size-32 mr-2">
+                                                            Amazing Product
+                                                        </td>
+                                                        <td>$1,230 USD</td>
+                                                        <td>
+                                                            <small class="text-danger mr-1">
+                                                                <i class="fas fa-arrow-down"></i>
+                                                                3%
+                                                            </small>
+                                                            198 Sold
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="text-muted">
+                                                                <i class="fas fa-search"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="../dist/img/g203.jpg" alt="Product 1"
+                                                                class="img-circle img-size-32 mr-2">
+                                                            Perfect Item
+                                                            <span class="badge bg-danger">NEW</span>
+                                                        </td>
+                                                        <td>$199 USD</td>
+                                                        <td>
+                                                            <small class="text-success mr-1">
+                                                                <i class="fas fa-arrow-up"></i>
+                                                                63%
+                                                            </small>
+                                                            87 Sold
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="text-muted">
+                                                                <i class="fas fa-search"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                                <!-- /.col-md-6 -->
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <h3 class="card-title">Sales</h3>
+                                                <a href="javascript:void(0)" class="text-decoration-none">View
+                                                    Report</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <p class="d-flex flex-column">
+                                                    <span class="text-bold text-lg">$18,230.00</span>
+                                                    <span>Sales Over Time</span>
+                                                </p>
+                                                <p class="ml-auto d-flex flex-column text-right">
+                                                    <span class="text-success">
+                                                        <i class="fas fa-arrow-up"></i> 33.1%
+                                                    </span>
+                                                    <span class="text-muted">Since last month</span>
+                                                </p>
+                                            </div>
+                                            <!-- /.d-flex -->
+
+                                            <div class="position-relative mb-4">
+                                                <img src="../dist/img/bar.png" alt="" height="200px">
+                                            </div>
+
+                                            <div class="d-flex flex-row justify-content-end">
+                                                <span class="mr-2">
+                                                    <i class="fas fa-square text-primary"></i> This year
+                                                </span>
+
+                                                <span>
+                                                    <i class="fas fa-square text-gray"></i> Last year
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="card">
+                                        <div class="card-header border-0">
+                                            <h3 class="card-title">Online Store Overview</h3>
+                                            <div class="card-tools">
+                                                <a href="#" class="btn btn-sm btn-tool">
+                                                    <i class="fas fa-download"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-sm btn-tool">
+                                                    <i class="fas fa-bars"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                                                <p class="text-success text-xl">
+                                                    <i class="ion ion-ios-refresh-empty"></i>
+                                                </p>
+                                                <p class="d-flex flex-column text-right">
+                                                    <span class="font-weight-bold">
+                                                        <i class="ion ion-android-arrow-up text-success"></i> 12%
+                                                    </span>
+                                                    <span class="text-muted">CONVERSION RATE</span>
+                                                </p>
+                                            </div>
+                                            <!-- /.d-flex -->
+                                            <div
+                                                class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                                                <p class="text-warning text-xl">
+                                                    <i class="ion ion-ios-cart-outline"></i>
+                                                </p>
+                                                <p class="d-flex flex-column text-right">
+                                                    <span class="font-weight-bold">
+                                                        <i class="ion ion-android-arrow-up text-warning"></i> 0.8%
+                                                    </span>
+                                                    <span class="text-muted">SALES RATE</span>
+                                                </p>
+                                            </div>
+                                            <!-- /.d-flex -->
+                                            <div class="d-flex justify-content-between align-items-center mb-0">
+                                                <p class="text-danger text-xl">
+                                                    <i class="ion ion-ios-people-outline"></i>
+                                                </p>
+                                                <p class="d-flex flex-column text-right">
+                                                    <span class="font-weight-bold">
+                                                        <i class="ion ion-android-arrow-down text-danger"></i> 1%
+                                                    </span>
+                                                    <span class="text-muted">REGISTRATION RATE</span>
+                                                </p>
+                                            </div>
+                                            <!-- /.d-flex -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.col-md-6 -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.container-fluid -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    ...</div>
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                    ...</div>
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.2.0
+            </div>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="../assets/dist/js/adminlte.js"></script>
+
+
+    <!-- DataTables  & Plugins -->
+    <script src="../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/plugins/jszip/jszip.min.js"></script>
+    <script src="../assets/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../assets/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
+    <!-- Script Custom Js -->
+    <script src="alert.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js">
+    </script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                // "buttons": ["pdf", "print"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-12:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

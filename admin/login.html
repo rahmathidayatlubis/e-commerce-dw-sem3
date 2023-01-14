@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ourshop | Login</title>
+    <!-- bs 5.2 -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <style>
+        .gtr {
+            background: linear-gradient(90deg, #BBD7E0, #70C5E0);
+            background-size: 400% 400%;
+            animation: anim 2.5s infinite ease-in-out;
+        }
+
+        @keyframes anim {
+            0% {
+                background-position: 0 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0 50%;
+            }
+        }
+    </style>
+</head>
+
+<body class="gtr">
+    <div class="container d-flex justify-content-center mt-5 bodi">
+        <div class="card rounded-0 shadow-lg border-0">
+            <div class="card-header text-center bg-primary rounded-0">
+                <span class="fw-bold h2">Login</span>
+            </div>
+            <div class="card-body px-4">
+                <form class="row">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="6 - 7 Karakter">
+                    </div>
+                    <div class="form-check ms-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Remember Me
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer mt-3 py-3">
+                <div class="d-flex justify-content-end">
+                    <a href="../index.html" class="btn btn-secondary fw-semibold me-2 px-4 rounded-4">
+                        Batal
+                    </a>
+                    <a href="dashboard.html" class="btn btn-primary fw-semibold px-4 rounded-4">
+                        Login
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Script Custom Js -->
+    <script src="../script.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js">
+    </script>
+</body>
+
+</html>

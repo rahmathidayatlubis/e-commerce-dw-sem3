@@ -1,0 +1,56 @@
+
+/* membuat container atau wadah dari scrollbar dengan lebar 20px  */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* membuat background dari scrollbar */
+  /* kasih warna transparan agar lebih estetik  */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+
+  /* membuat styling pada batang atau bar scrollbar  */
+  /* kita beri warna abu tua dengan lengkungan di sisi atas dan bawahnya  */
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+
+  /* warna akan berubah menjadi abu mudah saat kursor diarahkan  */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+
+.biru {
+    background-color: #00a9e0;
+}
+
+.bodi {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36); */
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.gerak-ih-backgroundnya{
+    background: linear-gradient(90deg, #BBD7E0, #70C5E0);
+    background-size: 400% 400%;
+    animation: anim 2.5s infinite ease-in-out;
+}
+
+@keyframes anim {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

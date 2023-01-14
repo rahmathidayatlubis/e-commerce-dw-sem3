@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang</title>
+    <!-- Bootstrap 5.2 -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- header section start -->
+    <header id=" home">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-4" href="#">
+                    <img src="../dist/img/stmik.png" alt="stmik" width="30px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                        <li class="nav-item px-4">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" href="#">Berita</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item dropdown px-4">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-flex me-3">
+                        <button class="btn btn-outline-success me-3" type="submit">Masuk</button>
+                        <button class="btn btn-success" type="submit">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header section end -->
+
+    <!-- content keranjang start -->
+    <section id="keranjang" class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Keranjang</h4>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col d-flex align-items-center">
+                            <div class="form-check me-auto">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Pilih Semua
+                                </label>
+                            </div>
+                            <div class="btn text-primary fw-bold fs-6 border border-0" data-bs-toggle="modal"
+                                data-bs-target="#deleteitems">
+                                Hapus
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="deleteitems" data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="deleteitemsLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header d-flex justify-content-center">
+                                            <h1 class="modal-title fs-3" id="deleteitemsLabel">Hapus Barang ?</h1>
+                                        </div>
+                                        <div class="modal-body d-flex justify-content-center">
+                                            Barang yang kamu pilih akan dihapus dari keranjang.
+                                        </div>
+                                        <div class="footer d-grid gap-2 px-5 pb-5 pt-5">
+                                            <button type="button" class="btn btn-success fw-semibold py-2">Hapus
+                                                Barang</button>
+                                            <button type="button" class="btn btn-light fw-semibold py-2"
+                                                data-bs-dismiss="modal">Batal</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border border-secondary border-2 opacity-25">
+                    <div class="row">
+                        <div class="col d-flex align-items-center ps-2">
+                            <div class="form-check d-flex align-items-center justify-content-center me-1">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-patch-check-fill me-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                            </svg>
+                            <span class="fw-semibold">Logitech G Official</span>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-2 d-flex ps-2">
+                            <div class="form-check d-flex align-items-center justify-content-center me-1">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            </div>
+                            <img src="../dist/img/g502.jpg" class="img-fluid rounded" alt="g502" width="80%">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body pb-0">
+                                <h6 class="card-title">Logitech G502 X Mouse
+                                    Gaming
+                                    Wired HERO 25K DPI - Black</h6>
+                                <span class="text-danger mt-1 d-inline-block">Sisa 4</span>
+                                <div class="d-flex mt-1 align-items-center">
+                                    <small class="bg-danger px-2 py-1 rounded p-1 fw-bold text-white">
+                                        17%
+                                    </small>
+                                    <small class="ms-1 text-muted text-decoration-line-through">
+                                        Rp1.149.000
+                                    </small>
+                                    <div class="fs-6 fw-bold ms-1">
+                                        Rp959.000
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div id="rahmat">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-4">
+                    <div class="shadow-sm p-3 mt-4">
+                        <div class="btn border rounded p-3 d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-percent text-success" viewBox="0 0 16 16">
+                                <path
+                                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                            </svg>
+                            <span class="me-auto ms-2 fw-semibold">
+                                Makin hemat pakai promo
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+                    <div class="shadow p-3 mt-2">
+                        <h6 class="fw-bold">
+                            Ringkasan Belanja
+                        </h6>
+                        <div class="mt-3">
+                            <div class="d-flex text-muted">
+                                <h6 class="me-auto">
+                                    Total Harga (1 barang)
+                                </h6>
+                                <h6>
+                                    Rp1.149.000
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="mt-0">
+                            <div class="d-flex text-muted">
+                                <h6 class="me-auto">
+                                    Total Diskon Barang
+                                </h6>
+                                <h6>
+                                    -Rp190.000
+                                </h6>
+                            </div>
+                        </div>
+                        <hr class="border border-secondary border-1 opacity-25">
+                        <div class="d-flex align-items-center">
+                            <span class="fw-bold me-auto">
+                                Total Belanja
+                            </span>
+                            <span class="fs-4 fw-bold">
+                                Rp959.000
+                            </span>
+                        </div>
+                        <div class="btn btn-success d-block mt-3 py-2 fw-bold fs-5">
+                            Beli (1)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content keranjang end -->
+
+    <script src="../script.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js">
+    </script>
+</body>
+
+</html>
