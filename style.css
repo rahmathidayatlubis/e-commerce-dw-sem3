@@ -54,3 +54,20 @@
         background-position: 0 50%;
     }
 } */
+
+
+.githubb {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  float: left;
+  text-align: center;
+  border-radius: 40px;
+  border: solid white 1px;
+  box-sizing: border-box;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+.githubb:hover{
+  background: #4267B2;
+}
