@@ -32,7 +32,8 @@
                 </li>
             </ul>
             <div class="d-flex pe-4">
-                <a class="loogot p-2 rounded text-decoration-none text-dark" href=" ../index.html">
+                <a class="loogot p-2 rounded text-decoration-none text-dark" href="#oout" data-bs-toggle="modal"
+                    data-bs-target="#oout">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                         class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -45,6 +46,7 @@
             </div>
         </nav>
         <!-- /.navbar -->
+
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar fixed-top sidebar-light-info elevation-4 sidebar-no-expand">
@@ -739,6 +741,26 @@
                 <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
                     ...</div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="oout" tabindex="-1" aria-labelledby="ooutLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h1 class="modal-title fs-5" id="ooutLabel">Keluar</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body border-0">
+                            Anda yakin ingin keluar ?
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-secondary rounded-1 px-3"
+                                data-bs-dismiss="modal">Batal</button>
+                            <a class="btn btn-primary rounded-1 px-3" href="../index.html">Keluar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.content-wrapper -->
 
@@ -758,6 +780,7 @@
         </footer>
     </div>
     <!-- ./wrapper -->
+
 
     <!-- REQUIRED SCRIPTS -->
 
