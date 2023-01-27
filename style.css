@@ -42,21 +42,15 @@
 }
 
 
-
-.githubb {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  float: left;
-  text-align: center;
-  border-radius: 40px;
-  border: solid white 1px;
-  box-sizing: border-box;
-  line-height: 40px;
-  transition: all 0.3s ease-out;
+.gtub{
+  border: 1px solid white;
+  padding: 8px;
+  
 }
-.githubb:hover{
-  background: #4267B2;
+
+.gtub:hover{
+  fill: ;
+  background: #fff;
 }
 
 .loogot:hover{
