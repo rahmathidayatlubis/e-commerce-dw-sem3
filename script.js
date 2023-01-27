@@ -589,12 +589,3 @@ for(let i = 0; i<dontClikThis.length; i++){
     });
   });
 }
-
-function text_404(){
-  Swal.fire({
-    icon: 'error',
-    title: 'Oops...',
-    text: 'Something went wrong!',
-    footer: '<a href="message/404.html">Why do I have this issue?</a>'
-  });
-}

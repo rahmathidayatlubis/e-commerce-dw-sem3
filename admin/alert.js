@@ -1,38 +1,3 @@
-document.querySelector('#tambahBr').addEventListener('click', function(){
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Berhasil menambahkan barang',
-        showConfirmButton: false,
-        timer: 1500
-      })
-});
-
-document.querySelector('#editBr').addEventListener('click', function(){
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Perubahan disimpan',
-        showConfirmButton: false,
-        timer: 1500
-      })
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // sweett alert
 const hapus = document.getElementsByClassName('btn-danger');
 for(let i = 0; i<hapus.length; i++){
@@ -73,3 +38,54 @@ for(let i = 0; i<hapus.length; i++){
       })
 });
 }
+
+
+
+document.querySelector('#tambahBr').addEventListener('click', function(){
+  Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Berhasil menambahkan barang',
+      showConfirmButton: false,
+      timer: 1500
+    })
+});
+
+document.querySelector('#editBr').addEventListener('click', function(){
+  Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Perubahan disimpan',
+      showConfirmButton: false,
+      timer: 1500
+    })
+});
+
+const dontClikThis = document.getElementsByClassName('dontClickThis');
+for(let i = 0; i<dontClikThis.length; i++){
+  dontClikThis[i].addEventListener('click', function() {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href="message/404.html">Why do I have this issue?</a>'
+    });
+  });
+}
+
+const awal = document.getElementById('awal');
+const akhir = document.getElementById('akhir');
+awal,akhir.addEventListener('change', function(){
+  let getAwal = awal.value;
+  document.querySelector('#getAwal').innerHTML = getAwal;
+
+  let getAkhir = akhir.value;
+  document.querySelector('#getAkhir').innerHTML = getAkhir;
+});
+
+const showLap = document.getElementById('showLap').classList;
+document.getElementById('lapPros').addEventListener('click',
+  function(){
+    showLap.toggle('d-none');
+  }
+)
