@@ -15,6 +15,7 @@
     <!-- css -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="dist/img/oos.png" sizes="48x48" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -104,7 +105,7 @@
         <!-- carousel section end -->
 
         <!-- produk section start -->
-        <section id="produk" class="mt-5 pt-5">
+        <section id="produk" class="mt-5 pt-5" data-aos="zoom-out-up">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3">
@@ -9629,7 +9630,7 @@
         <!-- produk section end -->
 
         <!-- new produk section start -->
-        <section id="newProduk" class="mt-5 pt-5">
+        <section id="newProduk" class="mt-5 pt-5" data-aos="zoom-in">
             <div id="newProduk" class="container-fluid mt-3">
                 <div class="row">
                     <div class="col text-center">
@@ -10375,7 +10376,7 @@
         <!-- new produk section end -->
 
         <!-- informasi sectiion start -->
-        <section id="informasi" class="mt-5 pt-5">
+        <section id="informasi" class="mt-5 pt-5" data-aos="zoom-in-left">
             <div class="container-fluid pt-5">
                 <div class="row">
                     <div class="col text-center">
@@ -10534,6 +10535,12 @@
     </script>
     <!-- sweetalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
